@@ -1,7 +1,10 @@
+dotenv.config();
 import express from 'express';
 import products from './data/products.js';
 import dotenv from 'dotenv';
-dotenv.config();
+import connectDB from './config/db.js';
+
+connectDB(); // connect to database
 const port = process.env.PORT || 8000; 
 
 const app = express();
